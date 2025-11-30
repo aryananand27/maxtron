@@ -33,6 +33,22 @@ Ensure the following are installed on your machine:
 
 ---
 
+---
+
+### Database Schema (`Tasks` Table)
+
+```sql
+CREATE TABLE "Tasks" (
+  id            SERIAL PRIMARY KEY,
+  title         VARCHAR(255) NOT NULL,
+  description   TEXT,
+  status        BOOLEAN NOT NULL DEFAULT false,
+  "createdAt"   TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
+  "updatedAt"   TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
+);
+```
+---
+
 ## Environment Variables
 
 Create a `.env` file in the root directory of the backend and add the following environment variables:
