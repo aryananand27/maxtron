@@ -66,6 +66,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ update = false, initialTask = null 
           description: description.trim() || undefined,
           status: isCompleted,
         });
+        console.log(updatedTask)
         toast.success('Task updated successfully!');
         navigate('/'); 
       } else {
@@ -73,6 +74,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ update = false, initialTask = null 
           title: title.trim(),
           description: description.trim() || undefined,
         });
+        console.log(newTask)
         toast.success('Task created successfully!');
         setTitle('');
         setDescription('');
