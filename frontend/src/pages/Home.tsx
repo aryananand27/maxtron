@@ -6,7 +6,7 @@ import { getAllTasks} from '../apis/apis';
 import { io} from 'socket.io-client';
 import { toast } from 'react-toastify';
 
-const API_URL = 'http://localhost:4000';
+const API_URL = 'https://maxtron-q3wg.onrender.com';
 
 const Home: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
